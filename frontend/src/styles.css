@@ -1,0 +1,229 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #111c3b;
+  color: #f8fbff;
+  padding: 1.5rem 1rem;
+}
+
+.brand {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+}
+
+.role-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.role-switcher {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid #324067;
+  background: #1b2a55;
+  color: #f8fbff;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.nav-button {
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid transparent;
+  border-radius: 0.45rem;
+  background: transparent;
+  color: #f8fbff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: #253564;
+}
+
+.nav-button.active {
+  background: #3558c0;
+  border-color: #6d8df0;
+}
+
+.main-panel {
+  padding: 1.5rem;
+}
+
+.content {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(16, 37, 84, 0.08);
+}
+
+.content h1 {
+  margin-top: 0;
+}
+
+.meta {
+  color: #334267;
+  font-weight: 600;
+}
+
+.balance-card,
+.leave-form,
+.request-panel {
+  border: 1px solid #dde4f3;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.leave-form {
+  display: grid;
+  gap: 0.6rem;
+  max-width: 360px;
+}
+
+.leave-form input {
+  border: 1px solid #b7c2df;
+  border-radius: 0.35rem;
+  padding: 0.5rem;
+}
+
+.submit-button {
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.6rem 0.8rem;
+  background: #3558c0;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #2b4698;
+}
+
+.feedback {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.feedback.success {
+  background: #e8f7ee;
+  color: #1f6a3d;
+  border: 1px solid #9dd3b2;
+}
+
+.feedback.error {
+  background: #fdecec;
+  color: #8f1d1d;
+  border: 1px solid #efbbbb;
+}
+
+.muted {
+  color: #5d6d95;
+}
+
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.8rem;
+}
+
+.requests-table th,
+.requests-table td {
+  border-bottom: 1px solid #e4e9f5;
+  text-align: left;
+  padding: 0.55rem;
+}
+
+.status {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.status.pending {
+  background: #fff4dc;
+  color: #8a5a00;
+}
+
+.status.approved {
+  background: #e8f7ee;
+  color: #1f6a3d;
+}
+
+.status.cancelled {
+  background: #f0f1f5;
+  color: #596176;
+}
+
+.approve-button,
+.cancel-button {
+  border: none;
+  border-radius: 0.35rem;
+  padding: 0.45rem 0.7rem;
+  background: #1f6a3d;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.approve-button:hover {
+  background: #18542f;
+}
+
+.cancel-button {
+  background: #b23a3a;
+}
+
+.cancel-button:hover {
+  background: #8f2d2d;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+}
